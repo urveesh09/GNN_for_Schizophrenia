@@ -1,6 +1,6 @@
 ## GNN-based Schizophrenia Link Prediction Implementation
 
-This repository encapsulates the source code accompanying a research paper on Graph Neural Network (GNN) applications for schizophrenia classification.
+This repository encapsulates the source code accompanying a research paper on Graph Neural Network (GNN) applications for schizophrenia ncRNA Link Prediction.
 
 ### Key Technical Considerations:
 
