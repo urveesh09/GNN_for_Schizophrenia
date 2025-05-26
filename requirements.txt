@@ -1,8 +1,0 @@
-torch
-torch_geometric
-networkx
-pandas
-matplotlib
-sklearn
-numpy
-random

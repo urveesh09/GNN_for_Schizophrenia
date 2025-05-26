@@ -1,0 +1,109 @@
+Below is the head(5) of NPInter
+Code:
+edges = pd.read_csv(np_inter,sep="\t", dtype=str)
+edges = edges.query("organism.str.contains('9606|Homo sapiens', case=False)")
+Output:
+interID	ncName	ncID	ncType	tarName	tarID	tarType	interDescription	experiment	reference	organism	tissueOrCell	tag	class	level	datasource
+3	ncRI-40000004	7SK	NONHSAG040596	lncRNA	MYC	NM_002467	protein	Electrophoretic mobility shift experiment indi...	EMSA	9018369	Homo sapiens	-	regulatory;promoter as action site	regulatory	RNA-RNA	Literature mining
+4	ncRI-40000005	7SK	NONHSAG040596	lncRNA	ABO	NM_020469	protein	Promoters pU6 and p7SK proved to express high ...	-	22522162	Homo sapiens	-	regulatory	regulatory	RNA-RNA	Literature mining
+5	ncRI-40000006	7SK	NONHSAG040596	lncRNA	HEXIM1	O94992	protein	Binding of the 7SK snRNA turns the HEXIM1 prot...	Yeast two-hybrid analysis;Immunofluorescence;M...	15201869;15994294;17671421;20675720;20926576;1...	Homo sapiens	-	ncRNA-protein binding	binding	RNA-Protein	Literature mining
+6	ncRI-40000007	7SK	NONHSAG040596	lncRNA	Oct1	P20263	protein	PTF and Oct-1 enhance transcription from the 7...	-	1535687	Homo sapiens	-	ncRNA is regulated	regulatory	DNA-TF	Literature mining
+7	ncRI-40000008	7SK	NONHSAG040596	lncRNA	Tat	P17735	protein	Tat efficiently replaces HEXIM1 on the 7SK snR...	-	20976203;20471949	Homo sapiens	-	ncRNA-protein binding	binding	RNA-Protein	Literature mining
+
+Below is the head(5) of psicquic_file, 
+Code:
+edges = pd.read_csv(psicquic_file, sep="\t", dtype=str)
+Output:
+
+URS00000561D6	PSICQUIC	PSICQUIC:URS00000561D6_10090	10090	lncRNA	Unnamed: 5
+0	URS000006A0E0	PSICQUIC	PSICQUIC:URS000006A0E0_559292	559292	snoRNA	NaN
+1	URS00000A63E4	PSICQUIC	PSICQUIC:URS00000A63E4_8090	8090	telomerase_RNA	NaN
+2	URS00000DE3E2	PSICQUIC	PSICQUIC:URS00000DE3E2_9606	9606	snoRNA	NaN
+3	URS00000E463C	PSICQUIC	PSICQUIC:URS00000E463C_559292	559292	snoRNA	NaN
+4	URS00001143F5	PSICQUIC	PSICQUIC:URS00001143F5_559292	559292	snRNA	NaN
+
+Below is the head(5) of genecode.v43.annotation.gtf
+
+Output:
+--- Attempting to read first 5 data lines from: /kaggle/input/gnn-edge-creation/gencode.v43.annotation.gtf ---
+chr1	HAVANA	gene	11869	14409	.	+	.	gene_id "ENSG00000290825.1"; gene_type "lncRNA"; gene_name "DDX11L2"; level 2; tag "overlaps_pseudogene";
+chr1	HAVANA	transcript	11869	14409	.	+	.	gene_id "ENSG00000290825.1"; transcript_id "ENST00000456328.2"; gene_type "lncRNA"; gene_name "DDX11L2"; transcript_type "lncRNA"; transcript_name "DDX11L2-202"; level 2; transcript_support_level "1"; tag "basic"; tag "Ensembl_canonical"; havana_transcript "OTTHUMT00000362751.1";
+chr1	HAVANA	exon	11869	12227	.	+	.	gene_id "ENSG00000290825.1"; transcript_id "ENST00000456328.2"; gene_type "lncRNA"; gene_name "DDX11L2"; transcript_type "lncRNA"; transcript_name "DDX11L2-202"; exon_number 1; exon_id "ENSE00002234944.1"; level 2; transcript_support_level "1"; tag "basic"; tag "Ensembl_canonical"; havana_transcript "OTTHUMT00000362751.1";
+chr1	HAVANA	exon	12613	12721	.	+	.	gene_id "ENSG00000290825.1"; transcript_id "ENST00000456328.2"; gene_type "lncRNA"; gene_name "DDX11L2"; transcript_type "lncRNA"; transcript_name "DDX11L2-202"; exon_number 2; exon_id "ENSE00003582793.1"; level 2; transcript_support_level "1"; tag "basic"; tag "Ensembl_canonical"; havana_transcript "OTTHUMT00000362751.1";
+chr1	HAVANA	exon	13221	14409	.	+	.	gene_id "ENSG00000290825.1"; transcript_id "ENST00000456328.2"; gene_type "lncRNA"; gene_name "DDX11L2"; transcript_type "lncRNA"; transcript_name "DDX11L2-202"; exon_number 3; exon_id "ENSE00002312635.1"; level 2; transcript_support_level "1"; tag "basic"; tag "Ensembl_canonical"; havana_transcript "OTTHUMT00000362751.1";
+
+--- End of first 5 non-header lines. ---
+Below is the head(5) of node_gene_features.csv
+Code:
+edges = pd.read_csv(node_gene_features)
+Output:
+
+rnacentral_id	R10424	R12195	R12198	R12199	R12200	R12258	R12259	R12260	R12263	...	R5733	R5735	R5737	R5738	R5757	R5760	R5764	R5765	R5766	R5768
+0	URS0000000A8C	0.000000	0.000000	0.570653	0.000000	0.000000	0.000000	0.000000	0.251597	0.000000	...	0.00000	0.000000	0.000000	0.000000	0.000000	0.000000	0.000000	0.000000	0.000000	0.000000
+1	URS0000000B3B	0.000000	0.000000	0.000000	0.000000	0.058968	0.000000	0.030375	0.014697	0.000000	...	0.00000	0.000000	0.000000	0.000000	0.000000	0.000000	0.000000	0.000000	0.000000	0.000000
+2	URS0000001A7A	0.000000	1.664785	2.187831	1.619926	2.087875	1.863489	2.578795	2.067583	2.123255	...	1.12482	0.000000	1.286368	0.829893	1.522296	1.753935	1.703820	1.091997	0.910705	0.433719
+3	URS0000001E80	0.775799	0.242114	0.247440	0.166314	0.000000	0.289407	0.315295	0.160340	0.270278	...	0.00000	0.305503	0.145354	0.080347	0.499540	0.262720	0.092905	0.115508	0.175851	0.207885
+4	URS0000001EB3	0.000000	0.000000	0.000000	1.315845	0.980446	0.000000	0.994613	0.308973	0.000000	...	0.00000	0.564791	0.000000	0.000000	0.000000	0.491398	0.000000	0.000000	0.000000	0.000000
+5 rows × 901 columns
+Below is the head(5) of ensembl_to_rnacentral
+Code:
+edges = pd.read_csv(ensembl_to_rnacentral)
+Output:
+
+external_id	rnacentral_id
+0	ENSGGOT00000057865	URS0000001A7A
+1	ENSGGOT00000037352	URS0000001EB3
+2	ENSGACT00000027712	URS0000007017
+3	ENSGGOT00000043930	URS0000007095
+4	ENSGGOT00000037246	URS0000007340
+
+Below is the head(5) of node_mndr_features.csv
+Output:
+rnacentral_id	mndr_score
+URS0000811E31	0.4569747132740409
+URS00025E62BE	0
+URS00025E4800	0.4569747132740409
+URS000076CFAB	0
+URS0000AA9C30	0
+
+NPInter_to_RNACentral that I have is empty
+In mirbase folder that I have I have hairpin.fa and mature.fa
+This is ouput of hairpin.fa
+--- Attempting to read first 5 records from: .\data/mirbase/hairpin.fa ---
+>cel-let-7 MI0000001 Caenorhabditis elegans let-7 stem-loop
+UACACUGUGGAUCCGGUGAGGUAGUAGGUUGUAUAGUUUGGAAUAUUACCACCGGUGAAC
+UAUGCAAUUUUCUACCUUACCGGAGACAGAACUCUUCGA
+>cel-lin-4 MI0000002 Caenorhabditis elegans lin-4 stem-loop
+AUGCUUCCGGCCUGUUCCCUGAGACCUCAAGUGUGAGUGUACUAUUGAUGCUUCACACCU
+GGGCUCUCCGGGUACCAGGACGGUUUGAGCAGAU
+>cel-mir-1 MI0000003 Caenorhabditis elegans miR-1 stem-loop
+AAAGUGACCGUACCGAGCUGCAUACUUCCUUACAUGCCCAUACUAUAUCAUAAAUGGAUA
+UGGAAUGUAAAGAAGUAUGUAGAACGGGGUGGUAGU
+>cel-mir-2 MI0000004 Caenorhabditis elegans miR-2 stem-loop
+UAAACAGUAUACAGAAAGCCAUCAAAGCGGUGGUUGAUGUGUUGCAAAUUAUGACUUUCA
+UAUCACAGCCAGCUUUGAUGUGCUGCCUGUUGCACUGU
+>cel-mir-34 MI0000005 Caenorhabditis elegans miR-34 stem-loop
+CGGACAAUGCUCGAGAGGCAGUGUGGUUAGCUGGUUGCAUAUUUCCUUGACAACGGCUAC
+CUUCACUGCCACCCCGAACAUGUCGUCCAUCUUUGAA
+
+--- End of first 5 records. ---
+This is ouput of mature.fa
+--- Attempting to read first 5 records from: .\data/mirbase/mature.fa ---
+>cel-let-7-5p MIMAT0000001 Caenorhabditis elegans let-7-5p
+UGAGGUAGUAGGUUGUAUAGUU
+>cel-let-7-3p MIMAT0015091 Caenorhabditis elegans let-7-3p
+CUAUGCAAUUUUCUACCUUACC
+>cel-lin-4-5p MIMAT0000002 Caenorhabditis elegans lin-4-5p
+UCCCUGAGACCUCAAGUGUGA
+>cel-lin-4-3p MIMAT0015092 Caenorhabditis elegans lin-4-3p
+ACACCUGGGCUCUCCGGGUACC
+>cel-miR-1-5p MIMAT0020301 Caenorhabditis elegans miR-1-5p
+CAUACUUCCUUACAUGCCCAUA
+
+--- End of first 5 records. ---
+
+There is also GSE53987_family.soft file
+There is node_brainseq_features.csv file that I have if you remember that
+There is geo_gse53987 folder that has raw CEL files ex. GSM1304852_10_BP_HPC
+
+
